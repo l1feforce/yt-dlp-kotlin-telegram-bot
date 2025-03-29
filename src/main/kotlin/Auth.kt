@@ -1,4 +1,4 @@
-package ru.gusev
+package org.gusev
 
 import com.github.kotlintelegrambot.extensions.filters.Filter
 

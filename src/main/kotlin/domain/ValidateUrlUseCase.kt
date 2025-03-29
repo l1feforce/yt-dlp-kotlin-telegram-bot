@@ -1,4 +1,4 @@
-package ru.gusev.domain
+package org.gusev.domain
 
 import java.net.URI
 

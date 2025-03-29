@@ -1,4 +1,4 @@
-package ru.gusev.util
+package org.gusev.util
 
 import com.github.kotlintelegrambot.dispatcher.handlers.MessageHandlerEnvironment
 import com.github.kotlintelegrambot.entities.ChatId

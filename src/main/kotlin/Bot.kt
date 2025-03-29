@@ -1,4 +1,4 @@
-package ru.gusev
+package org.gusev
 
 import com.github.kotlintelegrambot.dispatcher.handlers.CallbackQueryHandlerEnvironment
 import com.github.kotlintelegrambot.dispatcher.handlers.MessageHandlerEnvironment
@@ -7,14 +7,14 @@ import com.github.kotlintelegrambot.entities.InlineKeyboardMarkup
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.sample
 import kotlinx.coroutines.launch
-import ru.gusev.data.ChatStateRepository
-import ru.gusev.data.YtDlpRepository
-import ru.gusev.data.telegram.TelegramApi
-import ru.gusev.di.SimpleDiContainer
-import ru.gusev.domain.model.ChatState
-import ru.gusev.domain.model.VideoParams
-import ru.gusev.util.replyText
-import ru.gusev.util.sendMessage
+import org.gusev.data.ChatStateRepository
+import org.gusev.data.YtDlpRepository
+import org.gusev.data.telegram.TelegramApi
+import org.gusev.di.SimpleDiContainer
+import org.gusev.domain.model.ChatState
+import org.gusev.domain.model.VideoParams
+import org.gusev.util.replyText
+import org.gusev.util.sendMessage
 import kotlin.time.Duration.Companion.seconds
 
 private val logger = SimpleDiContainer.instance.logger

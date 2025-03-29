@@ -1,4 +1,4 @@
-package ru.gusev
+package org.gusev
 
 import com.github.kotlintelegrambot.bot
 import com.github.kotlintelegrambot.dispatch
@@ -7,11 +7,11 @@ import com.github.kotlintelegrambot.dispatcher.message
 import com.github.kotlintelegrambot.entities.ChatId
 import com.github.kotlintelegrambot.logging.LogLevel
 import kotlinx.coroutines.*
-import ru.gusev.data.YtDlpRepository
-import ru.gusev.di.SimpleDiContainer
-import ru.gusev.domain.model.ChatState
-import ru.gusev.domain.model.VideoParams
-import ru.gusev.util.replyText
+import org.gusev.data.YtDlpRepository
+import org.gusev.di.SimpleDiContainer
+import org.gusev.domain.model.ChatState
+import org.gusev.domain.model.VideoParams
+import org.gusev.util.replyText
 import kotlin.time.Duration.Companion.hours
 
 internal val appCoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)

@@ -1,7 +1,7 @@
 package data.ytdlp
 
 import data.ytdlp.model.YtDlpRequest
-import ru.gusev.domain.model.VideoParams
+import org.gusev.domain.model.VideoParams
 
 fun YtDlpRequest.OptionsBuilder.writeToFile(filePath: String) {
     addOption("-o", filePath)

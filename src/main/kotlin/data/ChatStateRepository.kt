@@ -1,8 +1,8 @@
-package ru.gusev.data
+package org.gusev.data
 
 import com.github.kotlintelegrambot.entities.ChatId
-import ru.gusev.domain.model.ChatState
-import ru.gusev.logger.Logger
+import org.gusev.domain.model.ChatState
+import org.gusev.logger.Logger
 import java.util.concurrent.ConcurrentHashMap
 
 internal class ChatStateRepository(

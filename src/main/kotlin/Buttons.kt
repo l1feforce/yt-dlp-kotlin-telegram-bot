@@ -1,7 +1,7 @@
-package ru.gusev
+package org.gusev
 
 import com.github.kotlintelegrambot.entities.keyboard.InlineKeyboardButton
-import ru.gusev.domain.model.VideoParams
+import org.gusev.domain.model.VideoParams
 
 internal object CancelVideoChooseButton {
     const val text = "Cancel"

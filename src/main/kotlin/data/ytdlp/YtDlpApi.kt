@@ -3,7 +3,7 @@ package data.ytdlp
 import kotlinx.coroutines.*
 import data.ytdlp.model.YtDlpRequest
 import data.ytdlp.model.YtDlpResponse
-import ru.gusev.logger.Logger
+import org.gusev.logger.Logger
 import java.io.File
 
 class YtDlpApi(

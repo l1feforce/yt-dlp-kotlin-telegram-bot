@@ -1,4 +1,4 @@
-package ru.gusev.logger
+package org.gusev.logger
 
 interface Logger {
     fun d(tag: String, message: () -> String)

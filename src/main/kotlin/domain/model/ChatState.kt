@@ -1,4 +1,4 @@
-package ru.gusev.domain.model
+package org.gusev.domain.model
 
 import kotlinx.coroutines.Job
 

@@ -1,16 +1,16 @@
-package ru.gusev.di
+package org.gusev.di
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.serialization.json.Json
-import ru.gusev.data.ChatStateRepository
-import ru.gusev.data.YtDlpRepository
-import ru.gusev.data.telegram.TelegramApi
+import org.gusev.data.ChatStateRepository
+import org.gusev.data.YtDlpRepository
+import org.gusev.data.telegram.TelegramApi
 import data.ytdlp.YtDlpApi
-import ru.gusev.domain.ValidateUrlUseCase
-import ru.gusev.logger.DefaultLogger
-import ru.gusev.util.getEnvVariable
+import org.gusev.domain.ValidateUrlUseCase
+import org.gusev.logger.DefaultLogger
+import org.gusev.util.getEnvVariable
 
 internal class SimpleDiContainer(
     private val telegramApiUrl: String,

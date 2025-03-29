@@ -1,4 +1,4 @@
-package ru.gusev.data
+package org.gusev.data
 
 import data.ytdlp.*
 import data.ytdlp.getVideoWithParams
@@ -7,9 +7,9 @@ import data.ytdlp.model.DownloadVideoResponse
 import data.ytdlp.model.VideoInfo
 import data.ytdlp.model.YtDlpRequest
 import data.ytdlp.util.readInputStreamAsFlow
-import ru.gusev.domain.model.VideoParams
-import ru.gusev.domain.model.VideoParams.Companion.FULL_SIZE_UNKNOWN
-import ru.gusev.logger.Logger
+import org.gusev.domain.model.VideoParams
+import org.gusev.domain.model.VideoParams.Companion.FULL_SIZE_UNKNOWN
+import org.gusev.logger.Logger
 
 internal class YtDlpRepository(
     private val logger: Logger,

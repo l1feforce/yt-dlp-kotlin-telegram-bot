@@ -1,4 +1,4 @@
-package ru.gusev.data.telegram
+package org.gusev.data.telegram
 
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
@@ -6,8 +6,8 @@ import io.ktor.client.plugins.*
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
 import io.ktor.utils.io.streams.*
-import ru.gusev.domain.model.VideoParams
-import ru.gusev.logger.Logger
+import org.gusev.domain.model.VideoParams
+import org.gusev.logger.Logger
 import java.io.File
 import kotlin.time.Duration.Companion.minutes
 
