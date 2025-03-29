@@ -32,7 +32,7 @@ internal class SimpleDiContainer(
         Json { ignoreUnknownKeys = true }
     }
     val ytDlpRepository by lazy {
-        YtDlpRepository(logger, ytDlpApi, json)
+        YtDlpRepository(logger, ytDlpApi, json, COOKIES)
     }
     val chatStateRepository by lazy {
         ChatStateRepository(logger)
@@ -49,6 +49,7 @@ internal class SimpleDiContainer(
                 .split(",")
                 .mapNotNull { it.trim().toLongOrNull() }
                 .toSet()
+        val COOKIES = getEnvVariable("COOKIES")
 
         val instance by lazy {
             SimpleDiContainer(telegramApiUrl = TELEGRAM_API_URL, botToken = BOT_TOKEN)

@@ -30,3 +30,9 @@ fun YtDlpRequest.OptionsBuilder.stdErrAsProgress() {
 fun YtDlpRequest.OptionsBuilder.ignoreExistedFiles() {
     addOption("--force-overwrites")
 }
+
+fun YtDlpRequest.OptionsBuilder.useCookies(cookiesPath: String?) {
+    if (!cookiesPath.isNullOrBlank()) {
+        addOption("--cookies", cookiesPath)
+    }
+}

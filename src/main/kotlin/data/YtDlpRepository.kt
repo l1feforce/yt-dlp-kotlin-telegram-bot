@@ -14,7 +14,8 @@ import org.gusev.logger.Logger
 internal class YtDlpRepository(
     private val logger: Logger,
     private val ytDlpApi: YtDlpApi,
-    private val json: Json
+    private val json: Json,
+    private val cookiesPath: String? = null
 ) {
     suspend fun update() {
         logger.d(TAG) { "Updating yt-dlp" }
@@ -27,6 +28,7 @@ internal class YtDlpRepository(
         logger.d(TAG) { "Requesting videoParams for url = $url" }
         val request = YtDlpRequest(url) {
             getVideoInfo()
+            useCookies(cookiesPath)
         }
 
         val response = ytDlpApi.executeRequest(request)
@@ -94,6 +96,7 @@ internal class YtDlpRepository(
             mergeOutputToOneFile()
             stdErrAsProgress()
             ignoreExistedFiles()
+            useCookies(cookiesPath)
         }
 
         val response = ytDlpApi.executeRequest(request, onResult)
