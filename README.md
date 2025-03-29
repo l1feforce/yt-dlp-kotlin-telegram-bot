@@ -1,6 +1,33 @@
 # yt-dlp-kotlin-telegram-bot
 
-## How-to instruction
+## About
+`TODO()`
+
+## Docker how-to instruction
+
+1) Clone repo
+
+2) Build image
+   ```shell
+   docker build -t tg-bot .
+   ```
+
+4) Run image
+   ```shell
+   docker run \
+     -p 8080:8080 \
+     -p 8081:8081 \
+     -e BOT_TOKEN="<your-token>" \
+     -e API_ID="<your-app-id>" \
+     -e API_HASH="<your-api-hash>" \
+     -e TELEGRAM_API_URL="http://127.0.0.1:8081/" \
+     -e USERS="12312312,321312312" \
+     -e COOKIES="~/path/to/cookies.txt" \
+     tg-bot
+   ```
+
+
+## Manual how-to instruction
 
 ### Step 0 (optional)
 If you want to use local telegram-bots-api to bypass the restrictions for uploading large files to telegram.
