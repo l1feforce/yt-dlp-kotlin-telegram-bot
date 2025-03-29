@@ -1,18 +1,27 @@
 # Этап 1: Сборка telegram-bot-api
 FROM ubuntu:22.04 AS tg-bot-api-builder
 
-# Добавляем репозиторий LLVM для Clang 18
+# Установка базовых зависимостей и настройка репозиториев
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    gnupg2 ca-certificates && \
-    echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-18 main" >> /etc/apt/sources.list && \
-    curl -L https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
+    ca-certificates \
+    gnupg2 \
+    curl && \
+    curl -fsSL https://apt.llvm.org/llvm-snapshot.gpg.key > /etc/apt/trusted.gpg.d/llvm.asc && \
+    echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-18 main" > /etc/apt/sources.list.d/llvm.list
 
-# Установка зависимостей
+# Установка компилятора и зависимостей
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    make git zlib1g-dev libssl-dev gperf cmake \
-    clang-18 libc++-18-dev libc++abi-18-dev && \
+    make \
+    git \
+    zlib1g-dev \
+    libssl-dev \
+    gperf \
+    cmake \
+    clang-18 \
+    libc++-18-dev \
+    libc++abi-18-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Клонирование и сборка
